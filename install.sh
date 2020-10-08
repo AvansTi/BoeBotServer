@@ -1,16 +1,6 @@
 cd $(dirname $0)
 BASEDIR=$(pwd -P)
-apt-get install -y oracle-java8-jdk git
-
-
-#install pigpio
-cd /home/pi/
-wget abyz.co.uk/rpi/pigpio/pigpio.zip
-unzip pigpio.zip
-cd PIGPIO
-make
-make install
-
+apt-get install -y openjdk-8-jdk-headless git mc libpigpio-dev libpigpio1
 
 #install server
 cd $(BASEDIR)
